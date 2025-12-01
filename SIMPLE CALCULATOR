@@ -149,6 +149,21 @@ body {
 }
 ----
 script.js
+
+window.addEventListener("keydown", (e) => {
+  const key = e.key;
+  if (/[0-9+\-*/.%]/.test(key)) {
+    currentInput += key;
+    updateDisplay(currentInput);
+  } else if (key === "Enter") {
+    equalBtn.click();
+  } else if (key === "Backspace") {
+    backspaceBtn.click();
+  } else if (key === "Escape") {
+    clearBtn.click();
+  }
+});
+
 const display = document.getElementById("display");
 const buttons = document.querySelectorAll(".btn");
 const clearBtn = document.getElementById("clear");
