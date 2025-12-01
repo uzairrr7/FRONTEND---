@@ -1,0 +1,204 @@
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="calculator">
+    <div class="display" id="display">0</div>
+
+    <div class="buttons">
+      <button class="btn clear" id="clear">C</button>
+      <button class="btn" id="backspace">⌫</button>
+      <button class="btn" data-value="%">%</button>
+      <button class="btn operator" data-value="/">÷</button>
+
+      <button class="btn" data-value="7">7</button>
+      <button class="btn" data-value="8">8</button>
+      <button class="btn" data-value="9">9</button>
+      <button class="btn operator" data-value="*">×</button>
+
+      <button class="btn" data-value="4">4</button>
+      <button class="btn" data-value="5">5</button>
+      <button class="btn" data-value="6">6</button>
+      <button class="btn operator" data-value="-">−</button>
+
+      <button class="btn" data-value="1">1</button>
+      <button class="btn" data-value="2">2</button>
+      <button class="btn" data-value="3">3</button>
+      <button class="btn operator" data-value="+">+</button>
+
+      <button class="btn zero" data-value="0">0</button>
+      <button class="btn" data-value=".">.</button>
+      <button class="btn equal" id="equal">=</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+---
+
+style.css
+
+:root {
+  --bg: #f5f7fa;
+  --btn: #ffffff;
+  --operator: #6366f1;
+  --operator-text: #ffffff;
+  --display-bg: #1e293b;
+  --display-text: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --shadow: 0 4px 16px rgba(0,0,0,0.1);
+  --radius: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.calculator {
+  background: var(--btn);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  overflow: hidden;
+  width: 320px;
+}
+
+.display {
+  background: var(--display-bg);
+  color: var(--display-text);
+  font-size: 2rem;
+  text-align: right;
+  padding: 20px;
+  height: 60px;
+  overflow-x: auto;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 15px;
+}
+
+.btn {
+  background: var(--btn);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+  background: #e2e8f0;
+}
+
+.operator {
+  background: var(--operator);
+  color: var(--operator-text);
+  font-weight: 600;
+}
+
+.operator:hover {
+  background: #4f46e5;
+}
+
+.equal {
+  background: #22c55e;
+  color: white;
+  grid-column: span 1;
+}
+
+.equal:hover {
+  background: #16a34a;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+.clear {
+  background: #f43f5e;
+  color: white;
+}
+
+.clear:hover {
+  background: #e11d48;
+}
+
+#backspace {
+  background: #facc15;
+}
+
+#backspace:hover {
+  background: #eab308;
+}
+----
+script.js
+const display = document.getElementById("display");
+const buttons = document.querySelectorAll(".btn");
+const clearBtn = document.getElementById("clear");
+const equalBtn = document.getElementById("equal");
+const backspaceBtn = document.getElementById("backspace");
+
+let currentInput = "";
+let resetNext = false;
+
+function updateDisplay(value) {
+  display.textContent = value;
+}
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const value = button.dataset.value;
+
+    if (!value) return; // skip special buttons
+
+    if (resetNext) {
+      currentInput = "";
+      resetNext = false;
+    }
+
+    currentInput += value;
+    updateDisplay(currentInput);
+  });
+});
+
+// Clear all
+clearBtn.addEventListener("click", () => {
+  currentInput = "";
+  updateDisplay("0");
+});
+
+// Backspace
+backspaceBtn.addEventListener("click", () => {
+  currentInput = currentInput.slice(0, -1);
+  updateDisplay(currentInput || "0");
+});
+
+// Evaluate expression
+equalBtn.addEventListener("click", () => {
+  try {
+    const result = eval(currentInput.replace("×", "*").replace("÷", "/"));
+    updateDisplay(result);
+    currentInput = result.toString();
+    resetNext = true;
+  } catch {
+    updateDisplay("Error");
+    currentInput = "";
+  }
+});
