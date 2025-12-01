@@ -152,6 +152,24 @@ body {
 ----
 script.js
 
+const history = document.getElementById("history");
+function addToHistory(expr, result) {
+  const item = document.createElement("p");
+  item.textContent = `${expr} = ${result}`;
+  history.prepend(item);
+}
+equalBtn.addEventListener("click", () => {
+  try {
+    const result = eval(currentInput);
+    addToHistory(currentInput, result);
+    updateDisplay(result);
+    currentInput = result.toString();
+  } catch {
+    updateDisplay("Error");
+  }
+});
+
+
 window.addEventListener("keydown", (e) => {
   const key = e.key;
   if (/[0-9+\-*/.%]/.test(key)) {
