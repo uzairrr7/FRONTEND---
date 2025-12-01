@@ -1,0 +1,489 @@
+index.html
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Md Uzair — Frontend Developer</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <meta name="description" content="Md Uzair — frontend developer. Portfolio showing projects, skills and contact.">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#home" aria-label="Home">Uzair<span class="dot">.</span></a>
+
+      <nav id="main-nav" class="nav">
+        <ul>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="btn-icon" title="Toggle dark mode" aria-pressed="false">🌙</button>
+        <button id="menu-toggle" class="btn-icon menu-btn" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle menu">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero container">
+      <div class="hero-left">
+        <h1 class="hero-title">Hi, I’m <strong>Md Uzair</strong></h1>
+        <p class="hero-sub">
+          Frontend developer building responsive and accessible web interfaces. I enjoy turning ideas into real products.
+        </p>
+        <div class="hero-cta">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn btn-outline" href="#contact">Hire Me</a>
+        </div>
+        <div class="skills">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span>
+        </div>
+      </div>
+
+      <div class="hero-right" aria-hidden="false">
+        <!-- simple SVG avatar placeholder -->
+        <div class="avatar">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Profile avatar">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0" stop-color="#4f46e5"/>
+                <stop offset="1" stop-color="#06b6d4"/>
+              </linearGradient>
+            </defs>
+            <rect width="120" height="120" rx="18" fill="url(#g)"/>
+            <g transform="translate(20,18)" fill="#fff">
+              <circle cx="40" cy="28" r="18" opacity="0.97"/>
+              <path d="M0 88c0-22 18-40 40-40s40 18 40 40H0z" />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I am a frontend developer focused on creating performant, accessible experiences. I write semantic HTML, modern CSS (Flexbox & Grid), and clean JavaScript. I love building components that are reusable and easy to maintain.</p>
+          <p>Currently studying and building projects to strengthen my portfolio and prepare for internships.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat">
+            <strong>2</strong>
+            <span>Years coding</span>
+          </div>
+          <div class="stat">
+            <strong>10+</strong>
+            <span>Mini projects</span>
+          </div>
+          <div class="stat">
+            <strong>HTML • CSS • JS</strong>
+            <span>Core stack</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects container">
+      <h2 class="section-title">Projects</h2>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-screenshot">
+            <!-- sample placeholder -->
+            <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Project screenshot">
+              <rect width="400" height="220" rx="8" fill="#f3f4f6"/>
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#9ca3af" font-size="20">Project 1</text>
+            </svg>
+          </div>
+          <div class="project-body">
+            <h3>Responsive Portfolio</h3>
+            <p>Personal portfolio site demonstrating responsive layout, animations and accessibility best practices.</p>
+            <div class="project-actions">
+              <a href="#" class="btn-sm">Live</a>
+              <a href="#" class="btn-sm btn-outline">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-screenshot">
+            <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Project screenshot">
+              <rect width="400" height="220" rx="8" fill="#f3f4f6"/>
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#9ca3af" font-size="20">Calculator</text>
+            </svg>
+          </div>
+          <div class="project-body">
+            <h3>Calculator</h3>
+            <p>Simple calculator built with vanilla JavaScript — focus on DOM and logic simplicity.</p>
+            <div class="project-actions">
+              <a href="#" class="btn-sm">Live</a>
+              <a href="#" class="btn-sm btn-outline">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-screenshot">
+            <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Project screenshot">
+              <rect width="400" height="220" rx="8" fill="#f3f4f6"/>
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#9ca3af" font-size="20">Weather App</text>
+            </svg>
+          </div>
+          <div class="project-body">
+            <h3>Weather App</h3>
+            <p>Uses open weather APIs to fetch and display current weather data for a searched city.</p>
+            <div class="project-actions">
+              <a href="#" class="btn-sm">Live</a>
+              <a href="#" class="btn-sm btn-outline">Code</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact container">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-grid">
+        <form id="contact-form" class="contact-form" novalidate>
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" id="name" required placeholder="Your name">
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" id="email" required placeholder="you@example.com">
+          </label>
+
+          <label>
+            <span>Message</span>
+            <textarea name="message" id="message" rows="5" required placeholder="Say hello — what would you like to build?"></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">Send</button>
+            <a class="btn btn-outline" href="mailto:your.email@example.com">Email Me</a>
+          </div>
+          <p id="form-alert" class="form-alert" aria-live="polite"></p>
+        </form>
+
+        <div class="contact-info">
+          <h3>Let's talk</h3>
+          <p>Open to internships and freelance work. Connect on GitHub or LinkedIn.</p>
+          <ul class="social">
+            <li><a href="#" aria-label="GitHub">GitHub</a></li>
+            <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+            <li><a href="#" aria-label="Twitter">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Md Uzair • Built with HTML, CSS & JavaScript</p>
+      <a href="#home" class="back-top" aria-label="Back to top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+---
+
+css/style.css
+
+:root{
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --text: #0f172a;
+  --muted: #6b7280;
+  --accent: #6366f1;
+  --accent-2: #06b6d4;
+  --glass: rgba(255,255,255,0.6);
+
+  --radius: 12px;
+  --container: 1100px;
+  --shadow-sm: 0 4px 12px rgba(15,23,42,0.06);
+}
+
+[data-theme="dark"]{
+  --bg: #0b1220;
+  --surface: #071022;
+  --text: #e6eef8;
+  --muted: #9fb0c6;
+  --accent: #7c6cff;
+  --accent-2: #06b6d4;
+  --glass: rgba(255,255,255,0.03);
+}
+
+/* Basic reset */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+  transition:background .25s ease, color .25s ease;
+}
+
+/* container */
+.container{max-width:var(--container);margin:0 auto;padding:0 20px}
+
+/* header */
+.site-header{position:sticky;top:0;background:var(--glass);backdrop-filter:blur(6px);z-index:60;border-bottom:1px solid rgba(0,0,0,0.04)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{font-weight:700;color:var(--text);text-decoration:none;font-size:1.15rem}
+.logo .dot{color:var(--accent);margin-left:4px}
+
+/* nav */
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:16px;align-items:center}
+.nav a{color:var(--muted);text-decoration:none;padding:6px 8px;border-radius:8px;font-weight:600}
+.nav a:hover, .nav a.active{color:var(--text);background:rgba(99,102,241,0.08)}
+
+/* header actions */
+.header-actions{display:flex;gap:8px;align-items:center}
+.btn-icon{background:transparent;border:none;padding:8px;border-radius:8px;cursor:pointer;font-size:1.02rem}
+.menu-btn{display:none}
+.hamburger{width:20px;height:2px;background:var(--text);display:inline-block;position:relative}
+.hamburger::after,.hamburger::before{content:"";position:absolute;left:0;width:100%;height:2px;background:var(--text)}
+.hamburger::before{top:-6px}
+.hamburger::after{top:6px}
+
+/* hero */
+.hero{display:flex;gap:32px;align-items:center;padding:56px 0}
+.hero-left{flex:1}
+.hero-right{width:250px;display:flex;justify-content:center;align-items:center}
+.hero-title{font-size:clamp(1.6rem,3.5vw,2.6rem);margin:0 0 8px}
+.hero-sub{color:var(--muted);margin:4px 0 18px}
+.hero-cta{display:flex;gap:12px;margin-bottom:14px}
+.btn{display:inline-block;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;box-shadow:var(--shadow-sm);border:none;cursor:pointer}
+.btn-outline{background:transparent;border:1px solid rgba(99,102,241,0.12);color:var(--text)}
+.btn-sm{display:inline-block;padding:6px 10px;border-radius:8px;text-decoration:none;font-weight:600}
+.avatar svg{width:200px;height:auto;border-radius:14px;box-shadow:var(--shadow-sm)}
+
+/* skills */
+.skills{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.skills span{background:var(--surface);padding:6px 10px;border-radius:999px;font-weight:600;color:var(--muted);font-size:.85rem}
+
+/* about */
+.section-title{font-size:1.25rem;margin:24px 0}
+.about-grid{display:grid;grid-template-columns:2fr 1fr;gap:18px;align-items:start}
+.about-text p{margin:0 0 12px;color:var(--muted)}
+.about-stats{display:flex;flex-direction:column;gap:12px}
+.stat{background:var(--surface);padding:16px;border-radius:12px;box-shadow:var(--shadow-sm)}
+.stat strong{display:block;font-size:1.1rem}
+
+/* projects */
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.project-card{background:var(--surface);border-radius:12px;overflow:hidden;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:transform .18s ease, box-shadow .18s ease}
+.project-card:hover{transform:translateY(-6px)}
+.project-screenshot svg{width:100%;display:block}
+.project-body{padding:14px}
+.project-actions{display:flex;gap:8px;margin-top:12px}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 300px;gap:18px;align-items:start}
+.contact-form label{display:block;margin-bottom:12px}
+.contact-form input, .contact-form textarea{
+  width:100%;padding:10px;border-radius:8px;border:1px solid rgba(15,23,42,0.06);background:transparent;color:var(--text);
+}
+.form-actions{display:flex;gap:12px;align-items:center}
+.form-alert{color:var(--muted);margin-top:10px}
+
+/* footer */
+.site-footer{padding:18px 0;border-top:1px solid rgba(0,0,0,0.04);margin-top:36px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:.95rem}
+
+/* utilities */
+.back-top{text-decoration:none;color:var(--muted)}
+.container a{transition:all .15s ease}
+
+/* responsive */
+@media (max-width:900px){
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .hero{flex-direction:column-reverse;padding:40px 0}
+  .hero-right{width:160px}
+}
+
+@media (max-width:680px){
+  .nav{display:none}
+  .menu-btn{display:inline-flex}
+  .hamburger, .hamburger::before, .hamburger::after{background:var(--text)}
+  .projects-grid{grid-template-columns:1fr}
+  .header-inner{gap:12px}
+  .logo{font-size:1rem}
+}
+
+/* mobile nav active (JS will add .nav-open to body) */
+body.nav-open .nav{display:block;position:absolute;left:20px;right:20px;top:68px;background:var(--bg);border-radius:10px;padding:12px;box-shadow:var(--shadow-sm)}
+body.nav-open .nav ul{flex-direction:column;gap:6px}
+---
+
+js/script.js
+
+// Basic UI interactions: menu toggle, smooth scrolling, theme toggle, contact form simple handling.
+
+(() => {
+  const body = document.body;
+  const menuToggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('main-nav');
+  const themeToggle = document.getElementById('theme-toggle');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const yearEl = document.getElementById('year');
+
+  // Set current year
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Menu toggle for mobile
+  menuToggle.addEventListener('click', () => {
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', String(!expanded));
+    body.classList.toggle('nav-open');
+  });
+
+  // Close mobile nav when a link is clicked
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      // Smooth scroll (native)
+      // Close mobile if open
+      if (body.classList.contains('nav-open')) {
+        body.classList.remove('nav-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+      // Set active class
+      setActiveLink(e.currentTarget);
+    });
+  });
+
+  function setActiveLink(activeEl) {
+    navLinks.forEach(a => a.classList.remove('active'));
+    if (activeEl) activeEl.classList.add('active');
+  }
+
+  // Smooth scroll behavior for anchor links (works for browsers that support it)
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      const href = anchor.getAttribute('href');
+      if (href === '#' || href === '#!') return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({behavior: 'smooth', block: 'start'});
+        // update location hash without jump
+        history.replaceState(null, '', href);
+      }
+    });
+  });
+
+  // Theme toggle (dark/light) persisted in localStorage
+  const THEME_KEY = 'portfolio-theme';
+  const saved = localStorage.getItem(THEME_KEY);
+  if (saved === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    themeToggle.textContent = '☀️';
+    themeToggle.setAttribute('aria-pressed', 'true');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+    themeToggle.textContent = '🌙';
+    themeToggle.setAttribute('aria-pressed', 'false');
+  }
+
+  themeToggle.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    if (current === 'dark') {
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem(THEME_KEY, 'light');
+      themeToggle.textContent = '🌙';
+      themeToggle.setAttribute('aria-pressed', 'false');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem(THEME_KEY, 'dark');
+      themeToggle.textContent = '☀️';
+      themeToggle.setAttribute('aria-pressed', 'true');
+    }
+  });
+
+  // Contact form (client-side simple validation + show fake success)
+  const form = document.getElementById('contact-form');
+  const alertEl = document.getElementById('form-alert');
+
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      // simple validation
+      const name = form.querySelector('#name').value.trim();
+      const email = form.querySelector('#email').value.trim();
+      const message = form.querySelector('#message').value.trim();
+
+      if (!name || !email || !message) {
+        showAlert('Please fill out all fields.');
+        return;
+      }
+
+      // rudimentary email pattern
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        showAlert('Please enter a valid email address.');
+        return;
+      }
+
+      // Here you'd normally send the data via fetch() to a server or service like EmailJS.
+      // For the demo, we show a success message and reset the form.
+      showAlert('Thanks — message sent (demo).', true);
+      form.reset();
+    });
+  }
+
+  function showAlert(msg, success = false) {
+    if (!alertEl) return;
+    alertEl.textContent = msg;
+    alertEl.style.color = success ? 'var(--accent-2)' : 'var(--muted)';
+    setTimeout(() => {
+      alertEl.textContent = '';
+    }, 4500);
+  }
+
+  // Highlight current section in nav on scroll
+  const sections = Array.from(document.querySelectorAll('main section[id]'));
+  function onScroll() {
+    const scrollPos = window.scrollY + 100;
+    let current = sections[0];
+    for (const sec of sections) {
+      if (sec.offsetTop <= scrollPos) {
+        current = sec;
+      }
+    }
+    const id = current && current.id ? `#${current.id}` : '#home';
+    const activeLink = document.querySelector(`.nav a[href="${id}"]`);
+    if (activeLink) setActiveLink(activeLink);
+  }
+  window.addEventListener('scroll', onScroll, {passive: true});
+  onScroll(); // initial
+})();
